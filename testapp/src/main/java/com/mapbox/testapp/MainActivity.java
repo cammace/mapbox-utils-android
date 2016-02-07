@@ -49,6 +49,7 @@ public class MainActivity extends AppCompatActivity {
         mapView.addMarker(markerOptions);
         */
 
+
         MarkerOptions to = new MarkerOptions()
                 .position(new LatLng(41.913046, -87.639444));
         mapView.addMarker(to);
@@ -66,11 +67,13 @@ public class MainActivity extends AppCompatActivity {
                 .color(Color.parseColor("#3887be"))
                 .width(5));
 
-        LatLng midpoint = MathUtil.midPoint(new LatLng(41.913046, -87.639444), new LatLng(41.890009, -87.762992));
+        List<LatLng> betweenPoints = MathUtil.pointsBetween(new LatLng(41.913046, -87.639444), new LatLng(41.890009, -87.762992), 10);
 
-        MarkerOptions mid = new MarkerOptions()
-                .position(midpoint);
-        mapView.addMarker(mid);
+        for(int i =0; i<betweenPoints.size(); i++) {
+            MarkerOptions betPoint = new MarkerOptions()
+                    .position(betweenPoints.get(i));
+            mapView.addMarker(betPoint);
+        }
     }
 
     @Override
