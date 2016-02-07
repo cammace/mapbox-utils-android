@@ -41,7 +41,7 @@ To find the midpoint between any two given latitude/longitude points just call t
 <img src="https://github.com/cammace/mapbox-utils-android/blob/master/screenshots/intermediate_points.png?raw=true" width="360">
 </p>
 
-Gives a list of intermediate points between two given latitude/longitude points. How many points is determined by the double value smoothness. The larger the value the more points you'll received between the original two given points. When performing this calculation, think of it as your breaking up a line between the two given points into n amount of sections. This n amount of sections is determined by the smoothness parameter. It's important to note that the last point in the list is the same as the "to" point. 
+Gives a list of intermediate points between two given latitude/longitude points. It's useful when you want to animate a marker moving between two points. How many points is determined by the double value smoothness. The larger the value the more points you'll received between the original two given points. When performing this calculation, think of it as your breaking up a line between the two given points into n amount of sections. This n amount of sections is determined by the smoothness parameter. It's important to note that the last point in the list is the same as the "to" point. 
 
 ```java
         LatLng from = new LatLng(41.890009, -87.762992);
@@ -49,3 +49,11 @@ Gives a list of intermediate points between two given latitude/longitude points.
         List<LatLng> betweenPoints = MathUtil.pointsBetween(from, to, 10);
 ```
 
+##### Distance
+
+##### Heading
+
+## Upcoming features
+  * Add library to jcenter/maven repos
+  * Marker clusters
+  * Heatmaps
