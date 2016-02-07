@@ -4,7 +4,7 @@
     android:layout_height="wrap_content"
     android:orientation="vertical">
 
-    <com.mapbox.utils.utils.BubbleLayout
+    <com.mapbox.utils.BubbleLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:orientation="vertical">
@@ -19,5 +19,5 @@
             android:paddingRight="10dp"
             android:paddingTop="5dp"/>
 
-    </com.mapbox.utils.utils.BubbleLayout>
+    </com.mapbox.utils.BubbleLayout>
 </LinearLayout>
