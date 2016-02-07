@@ -6,10 +6,12 @@ import android.os.Bundle;
 
 import com.mapbox.mapboxsdk.annotations.IconFactory;
 import com.mapbox.mapboxsdk.annotations.MarkerOptions;
+import com.mapbox.mapboxsdk.annotations.PolylineOptions;
 import com.mapbox.mapboxsdk.constants.Style;
 import com.mapbox.mapboxsdk.geometry.LatLng;
 import com.mapbox.mapboxsdk.views.MapView;
 import com.mapbox.utils.BubbleIconFactory;
+import com.mapbox.utils.MathUtil;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -36,6 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mapView.setZoom(11);
         mapView.onCreate(savedInstanceState);
 
+        /*
         // To place a BubbleIcon marker
         BubbleIconFactory bubbleIcon = new BubbleIconFactory(MainActivity.this);
         IconFactory iconFactory = IconFactory.getInstance(this);
@@ -44,6 +47,30 @@ public class MainActivity extends AppCompatActivity {
                 .icon(iconFactory.fromBitmap(bubbleIcon.makeIcon("HelloWorld")))
                 .position(new LatLng(41.885, -87.679));
         mapView.addMarker(markerOptions);
+        */
+
+        MarkerOptions to = new MarkerOptions()
+                .position(new LatLng(41.913046, -87.639444));
+        mapView.addMarker(to);
+
+        MarkerOptions from = new MarkerOptions()
+                .position(new LatLng(41.890009, -87.762992));
+        mapView.addMarker(from);
+
+        LatLng[] point = new LatLng[2];
+        point[0] = new LatLng(41.913046, -87.639444);
+        point[1] = new LatLng(41.890009, -87.762992);
+
+        mapView.addPolyline(new PolylineOptions()
+                .add(point)
+                .color(Color.parseColor("#3887be"))
+                .width(5));
+
+        LatLng midpoint = MathUtil.midPoint(new LatLng(41.913046, -87.639444), new LatLng(41.890009, -87.762992));
+
+        MarkerOptions mid = new MarkerOptions()
+                .position(midpoint);
+        mapView.addMarker(mid);
     }
 
     @Override
