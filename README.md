@@ -43,7 +43,7 @@ To find the midpoint between any two given latitude/longitude points just call t
 
 ##### Intermediate points
 <p align="center">
-<img src="https://github.com/cammace/mapbox-utils-android/blob/master/screenshots/midpoint.png?raw=true" width="360">
+<img src="https://github.com/cammace/mapbox-utils-android/blob/master/screenshots/intermediate_points.png?raw=true" width="360">
 </p>
 
 Gives a list of intermediate points between two given latitude/longitude points. How many points is

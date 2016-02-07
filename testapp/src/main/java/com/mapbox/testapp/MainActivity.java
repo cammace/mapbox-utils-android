@@ -38,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         mapView.setZoom(11);
         mapView.onCreate(savedInstanceState);
 
-        /*
+
         // To place a BubbleIcon marker
         BubbleIconFactory bubbleIcon = new BubbleIconFactory(MainActivity.this);
         IconFactory iconFactory = IconFactory.getInstance(this);
@@ -47,33 +47,6 @@ public class MainActivity extends AppCompatActivity {
                 .icon(iconFactory.fromBitmap(bubbleIcon.makeIcon("HelloWorld")))
                 .position(new LatLng(41.885, -87.679));
         mapView.addMarker(markerOptions);
-        */
-
-
-        MarkerOptions to = new MarkerOptions()
-                .position(new LatLng(41.913046, -87.639444));
-        mapView.addMarker(to);
-
-        MarkerOptions from = new MarkerOptions()
-                .position(new LatLng(41.890009, -87.762992));
-        mapView.addMarker(from);
-
-        LatLng[] point = new LatLng[2];
-        point[0] = new LatLng(41.913046, -87.639444);
-        point[1] = new LatLng(41.890009, -87.762992);
-
-        mapView.addPolyline(new PolylineOptions()
-                .add(point)
-                .color(Color.parseColor("#3887be"))
-                .width(5));
-
-        List<LatLng> betweenPoints = MathUtil.pointsBetween(new LatLng(41.913046, -87.639444), new LatLng(41.890009, -87.762992), 10);
-
-        for(int i =0; i<betweenPoints.size(); i++) {
-            MarkerOptions betPoint = new MarkerOptions()
-                    .position(betweenPoints.get(i));
-            mapView.addMarker(betPoint);
-        }
     }
 
     @Override
