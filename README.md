@@ -30,7 +30,7 @@ For example, to place a bubble icon with the string "HelloWorld", you do the fol
 #### Calculate distance, heading, points between, and more
 ##### Midpoint
 <p align="center">
-<img src="https://github.com/cammace/mapbox-utils-android/blob/master/screenshots/bubble_icons.png?raw=true" width="360">
+<img src="https://github.com/cammace/mapbox-utils-android/blob/master/screenshots/midpoint.png?raw=true" width="360">
 </p>
 
 To find the midpoint between any two given latitude/longitude points just call the method like so:
