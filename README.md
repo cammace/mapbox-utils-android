@@ -54,6 +54,7 @@ Gives a list of intermediate points between two given latitude/longitude points.
 ##### Heading
 
 ## Upcoming features
+  * Polyline calculations such as area within enclosed polyline and distance between point and polyline
   * Add library to jcenter/maven repos
   * Marker clusters
   * Heatmaps
