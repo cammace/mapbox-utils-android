@@ -9,6 +9,12 @@
 <img src="https://github.com/cammace/mapbox-utils-android/blob/master/screenshots/bubble_icons.png?raw=true" width="360">
 </p>
 
+<p align="center">
+<img src="http://i.imgur.com/gM6PwEW.gifv" width="300">
+<br>
+<i> Even my Airbnb used Mapbox maps
+</p>
+
 A bubble icon is used to replace a marker icon. It is used to include snippets of information on a marker itself such as price or address. They appear on a MapView looking like a miniature sized infoWindow containing text of type String. This offers a huge advantage in that the markers are already displaying vital information to users without them even having to click/tap the marker. Since the bubble icons are generated on the fly you can customize things such as background color and text font color.
 
 For example, to place a bubble icon with the string "HelloWorld", you do the following:
